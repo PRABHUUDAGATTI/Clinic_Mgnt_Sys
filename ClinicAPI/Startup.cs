@@ -1,4 +1,5 @@
 using ClinicBusiness;
+using ClinicBusiness.Services;
 using ClinicData.Data;
 using ClinicData.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -31,8 +32,12 @@ namespace ClinicAPI
         {
             string connectionStr = Configuration.GetConnectionString("sqlConnection");
             services.AddDbContext<ClinicDbContext>(options => options.UseSqlServer(connectionStr));
+
             services.AddTransient<PatientService, PatientService>();
             services.AddTransient<IPatientRepository, PatientRepository>();
+            services.AddTransient<DepartmentService, DepartmentService>();
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddSwaggerGen(c =>
