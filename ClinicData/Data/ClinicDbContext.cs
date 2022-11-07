@@ -15,7 +15,15 @@ namespace ClinicData.Data
 
         }
 
+        public DbSet<Admin> admins { get; set; }
         public DbSet<Patient> patients { get; set; }
+        public DbSet<Appointment> appointments { get; set; }
+        public DbSet<Department> departments { get; set; }
+        public DbSet<Doctor> doctors { get; set; }
+
+        public DbSet<LoginTable> loginTables { get; set; }
+        public DbSet<OtherStaff> otherStaffs { get; set; }
+        public DbSet<Pending_Feedback> pending_Feedbacks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
