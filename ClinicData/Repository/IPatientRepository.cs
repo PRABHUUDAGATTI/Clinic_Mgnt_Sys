@@ -7,9 +7,12 @@ namespace ClinicData.Repository
 {
     public interface IPatientRepository
     {
+        #region All Method for Patients
         void AddPatient(Patient patient);
+        void UpdatePatient(Patient patient);    
         void DeletePatient(int patientId);
-        void GetAll();
-
+        Patient GetPatientById(int patientId);
+        IEnumerable<Patient> GetAllPatients();
+        #endregion
     }
 }
