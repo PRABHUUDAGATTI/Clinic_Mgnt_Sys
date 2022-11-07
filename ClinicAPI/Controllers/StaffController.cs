@@ -18,10 +18,10 @@ namespace ClinicAPI.Controllers
             _staffService = staffService;
         }
 
-        [HttpGet("GetAllStaff")]
-        public IEnumerable<OtherStaff> GetAllStaff()
+        [HttpGet("GetAllStaffs")]
+        public IEnumerable<OtherStaff> GetAllStaffs()
         {
-            return _staffService.GetAllStaff();
+            return _staffService.GetAllStaffs();
         }
 
         [HttpPost("AddStaff")]

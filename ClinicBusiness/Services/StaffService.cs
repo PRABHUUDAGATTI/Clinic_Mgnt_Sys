@@ -29,9 +29,9 @@ namespace ClinicBusiness.Services
         {
             return _staffRepository.GetStaffbyId(staffId);  
         }
-        public IEnumerable<OtherStaff> GetAllStaff()
+        public IEnumerable<OtherStaff> GetAllStaffs()
         {
-            return _staffRepository.GetAllStaff();
+            return _staffRepository.GetAllStaffs();
         }
     }
 }

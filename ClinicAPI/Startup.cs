@@ -38,6 +38,8 @@ namespace ClinicAPI
             services.AddTransient<IDoctorRepository, DoctorRepository>();
             services.AddTransient<StaffService, StaffService>();  
             services.AddTransient<IStaffRepository, StaffRepository>();
+            services.AddTransient<FeedbackService, FeedbackService>();
+            services.AddTransient<IFeedback, FeedbackRepository>();
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddSwaggerGen(c =>

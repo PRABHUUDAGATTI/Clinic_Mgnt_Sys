@@ -11,6 +11,6 @@ namespace ClinicData.Repository
         void DeleteStaff(int staffId);
         void UpdateStaff(OtherStaff otherStaff);
         OtherStaff GetStaffbyId(int staffId);
-        IEnumerable<OtherStaff> GetAllStaff();
+        IEnumerable<OtherStaff> GetAllStaffs();
     }
 }

@@ -19,6 +19,7 @@ namespace ClinicData.Data
 
         public DbSet<Doctor> doctors { get; set; }
         public DbSet<OtherStaff> otherStaffs { get; set; }
+        public DbSet<Pending_Feedback> pending_feedbacks { get; set; }  
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {

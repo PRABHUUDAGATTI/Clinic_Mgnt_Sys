@@ -29,7 +29,7 @@ namespace ClinicData.Repository
             _clinicDbContext.SaveChanges();
         }
 
-        public IEnumerable<OtherStaff> GetAllStaff()
+        public IEnumerable<OtherStaff> GetAllStaffs()
         {
             return _clinicDbContext.otherStaffs.ToList();
         }
