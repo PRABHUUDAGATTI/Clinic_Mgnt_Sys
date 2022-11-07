@@ -4,14 +4,16 @@ using ClinicData.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ClinicData.Migrations
 {
     [DbContext(typeof(ClinicDbContext))]
-    partial class ClinicDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221107095603_clinic11")]
+    partial class clinic11
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,45 +118,6 @@ namespace ClinicData.Migrations
                     b.HasKey("LoginID");
 
                     b.ToTable("LoginTable");
-                });
-
-            modelBuilder.Entity("ClinicEntity.Models.OtherStaff", b =>
-                {
-                    b.Property<int>("StaffID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Address")
-                        .HasColumnType("varchar(30)");
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Designation")
-                        .IsRequired()
-                        .HasColumnType("varchar(15)");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("char(1)");
-
-                    b.Property<string>("Highest_Qualification")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("char(12)");
-
-                    b.Property<float>("Salary")
-                        .HasColumnType("real");
-
-                    b.HasKey("StaffID");
-
-                    b.ToTable("otherStaffs");
                 });
 
             modelBuilder.Entity("ClinicEntity.Models.Patient", b =>
