@@ -11,6 +11,7 @@ namespace ClinicEntity.Models
     {
         [Key]
         [ForeignKey("LoginTable")]
+        
         public int DoctorID { get; set; }
         public LoginTable LoginTable { get; set; }
 

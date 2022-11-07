@@ -10,7 +10,7 @@ namespace ClinicEntity.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   
-        public int LoginID { get; set; }
+        public int ID { get; set; }
         [Required]
         [Column(TypeName = "varchar(20)")]
         public string Password { get; set; }
